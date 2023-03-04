@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage ('Testing') {
       steps {
-          git branch: 'dev', credentialsId: 'for-git', url: 'https://github.com/AAT-technologies/paymentservice.git'
+          git branch: 'prod', credentialsId: 'for-git', url: 'https://github.com/AAT-technologies/paymentservice.git'
           sh ''' sudo docker login -u folumii -p dckr_pat_3htEwdzErAa3N4Doxkyo_XcBx6k
           '''
           sh ''' sudo docker system prune -af
