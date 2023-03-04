@@ -4,15 +4,15 @@ pipeline {
     stage ('Testing') {
       steps {
           git branch: 'dev', credentialsId: 'for-git', url: 'https://github.com/AAT-technologies/paymentservice.git'
-          sh ''' sudo docker login -u folumii -p dckr_pat_3htEwdzErAa3N4Doxkyo_XcBx6k
+          sh ''' sudo docker login -u delalixx -p dckr_pat_-dfSKHYHBVZNLTVX1R5sxmNGJwo
           '''
           sh ''' sudo docker system prune -af
           '''
          
          sh ''' cd app-payment/paymentservice
                    ls
-                   sudo docker build -t folumii/paymentservice .
-                   sudo docker push folumii/paymentservice
+                   sudo docker build -t delalixx/paymentservice .
+                   sudo docker push delalixx/paymentservice
                    '''
          sh ''' sudo docker system prune -af
                   '''
