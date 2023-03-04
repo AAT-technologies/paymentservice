@@ -32,7 +32,6 @@ pipeline {
                  kubectl apply -f cluster.yaml
                  kubectl get node
                  kubectl get service
-                 kubectl get service frontend-external
                  '''
            }
         }
