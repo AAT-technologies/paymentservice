@@ -47,7 +47,7 @@ spec:
               - all
           privileged: false
           readOnlyRootFilesystem: true
-        image: delalixx/paymentservice:latest
+        image: delalixx/paymentservice:v1
         ports:
         - containerPort: 50051
         env:
